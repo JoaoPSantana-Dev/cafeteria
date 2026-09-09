@@ -28,13 +28,65 @@ export default function App() {
         </View>
 
 
-        <View style={styles.card}>
+      {/* Prato do Dia */}
+        <View style={styles.card_pratoDia}>
           <Image style={styles.image} source={require('./assets/coffee.jpg')}></Image>
           <Text style={styles.cardTitle}>Cappucino Especial</Text>
           <Text style={styles.cardSubtitle}>Cremoso e delicioso</Text>
           <Text style={styles.cardPreco}>R$ 12,90</Text>
-
         </View>
+      {/* Prato do Dia */}
+
+
+      {/* Padaria */}
+      <View style={styles.padaria}>
+
+        <View>
+          <Text style={styles.padariaTitle}>Padaria</Text>
+        </View>
+
+        {/*Primeiro Card*/}
+        <View style={styles.cardPadaria}>
+
+          <View style={styles.cardPadariaTexto}>
+            <Text style={styles.cardTitle}>Pão </Text>
+            <Text style={styles.cardSubtitle}>Pão frânces artesanal feito por nós.</Text>
+            <Text style={styles.cardPreco}>R$ 15,00/Kg</Text>
+          </View>
+
+          <Image style={styles.cardPadariaImagem} source={require("./assets/paes.jpg")}></Image>
+        </View>
+        {/*Primeiro Card*/}
+
+        {/*Segundo Card*/}
+         <View style={styles.cardPadaria}>
+
+          <View style={styles.cardPadariaTexto}>
+            <Text style={styles.cardTitle}>Baguete</Text>
+            <Text style={styles.cardSubtitle}>Baguete artesanal perfeita com cappucino.</Text>
+            <Text style={styles.cardPreco}>R$ 25,99 </Text>
+          </View>
+
+          <Image style={styles.cardPadariaImagem} source={require("./assets/baguetes.jpeg")}></Image>
+        </View>
+        {/*Segundo Card*/}
+
+        {/*Terceiro Card*/}
+         <View style={styles.cardPadaria}>
+
+          <View style={styles.cardPadariaTexto}>
+            <Text style={styles.cardTitle}>Sonho Moça</Text>
+            <Text style={styles.cardSubtitle}>Sonho artesanal feito com leite moça</Text>
+            <Text style={styles.cardPreco}>R$ 8,99 </Text>
+          </View>
+
+          <Image style={styles.cardPadariaImagem} source={require("./assets/sonho.jpg")}></Image>
+        </View>
+        {/*Terceiro Card*/}
+
+      </View>
+
+
 
 
 
@@ -107,10 +159,21 @@ const styles = StyleSheet.create({
     marginTop: 8
   },
 
-  card:{
+  card_pratoDia:{
     padding:8,
-    backgroundColor: "#f77070",
-    borderRadius: 10
+    backgroundColor: "#cf6f51",
+    borderRadius: 10,
+
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+
+    shadowOpacity: 0.2,
+    shadowRadius: 5,
+
+    elevation: 5,
   },
 
   cardTitle: {
@@ -126,7 +189,8 @@ const styles = StyleSheet.create({
   },
 
   cardPreco: {
-     fontSize: 16,
+    fontSize: 16,
+    fontWeight: "800",
     color: "#141313",
     marginTop: 5
   },
@@ -134,6 +198,49 @@ const styles = StyleSheet.create({
   image:{
     width: "100%",
     height: 180
+  },
+
+  padaria:{
+    marginTop: 24,
+    marginBottom:10  
+  },
+
+  padariaTitle: {
+    fontSize: 24,
+    fontWeight: "800",
+    color: "#2f2d2c",
+    marginBottom: 10
+  },
+
+  cardPadaria: {
+    padding:8,
+    backgroundColor: "#ffffff",
+    borderRadius: 10,
+    marginBottom:10,
+    flexDirection: "row",
+
+    borderColor: "#000",
+    borderWidth: 1,
+    
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+
+    shadowOpacity: 0.2,
+    shadowRadius: 5,
+
+    elevation: 5,
+  },
+
+  cardPadariaTexto: {
+    maxWidth: "60%"
+  },
+
+  cardPadariaImagem: {
+    width: "40%",
+    height: "100%"
   }
 
 
