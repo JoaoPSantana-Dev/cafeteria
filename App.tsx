@@ -21,10 +21,16 @@ export default function App() {
 
       {/* Conteudo */}
       <View style={styles.content}>
-        <Text style={styles.contentTitle}>Bom dia!</Text>
-        <Text style={styles.contentSubtitle}>Que tal um café hoje?</Text>
+        
+        <View style={styles.greetingSection}>
+          <Text style={styles.greetingTitle}>Bom dia!</Text>
+          <Text style={styles.greetingSubtitle}>Que tal um café hoje?</Text>
+        </View>
+
 
       </View>
+
+
 
       {/* Conteudo */}
 
@@ -76,17 +82,21 @@ const styles = StyleSheet.create({
     paddingHorizontal: 24,
   },
 
-  contentTitle: {
-    fontSize: 32,
-    fontWeight: "800",
-    color: "#2f2d2c",
-    marginTop: 8,
+  greetingSection:{
+    marginTop:10,
+    marginBottom:24
   },
 
-  contentSubtitle: {
+  greetingTitle: {
+    fontSize: 32,
+    fontWeight: "800",
+    color: "#2f2d2c"
+  },
+
+  greetingSubtitle: {
     fontSize: 16,
     color: "#9b9b9b",
-    marginTop: 8,
+    marginTop: 8
   },
 
 
