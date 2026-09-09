@@ -1,5 +1,5 @@
 import { Ionicons } from '@expo/vector-icons';
-import { StyleSheet, Text, View, ScrollView } from 'react-native';
+import { StyleSheet, View, ScrollView, Text, Image } from 'react-native';
 
 export default function App() {
   return (
@@ -28,9 +28,17 @@ export default function App() {
         </View>
 
 
+        <View style={styles.card}>
+          <Image style={styles.image} source={require('./assets/coffee.jpg')}></Image>
+          <Text style={styles.cardTitle}>Cappucino Especial</Text>
+          <Text style={styles.cardSubtitle}>Cremoso e delicioso</Text>
+          <Text style={styles.cardPreco}>R$ 12,90</Text>
+
+        </View>
+
+
+
       </View>
-
-
 
       {/* Conteudo */}
 
@@ -98,6 +106,35 @@ const styles = StyleSheet.create({
     color: "#9b9b9b",
     marginTop: 8
   },
+
+  card:{
+    padding:8,
+    backgroundColor: "#f77070",
+    borderRadius: 10
+  },
+
+  cardTitle: {
+    fontSize: 24,
+    fontWeight: "800",
+    color: "#2f2d2c"
+  },
+
+  cardSubtitle: {
+    fontSize: 16,
+    color: "#141313",
+    marginTop: 5
+  },
+
+  cardPreco: {
+     fontSize: 16,
+    color: "#141313",
+    marginTop: 5
+  },
+
+  image:{
+    width: "100%",
+    height: 180
+  }
 
 
 })
